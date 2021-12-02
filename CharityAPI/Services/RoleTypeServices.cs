@@ -44,7 +44,7 @@ namespace WebAPI.Services
             return roleType;
         }
 
-        public IEnumerable GetAllRoleType()
+        public IEnumerable GetAllRoleTypes()
         {
             var roleTypes = _context.RoleType.Where(x => x.IsPublished == true).ToList();
             return roleTypes;
