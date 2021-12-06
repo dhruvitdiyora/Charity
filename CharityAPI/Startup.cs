@@ -37,6 +37,8 @@ namespace CharityAPI
             services.AddControllers();
             services.AddScoped<ICityServices, CityServices>();
             services.AddScoped<IStateServices, StateServices>();
+            services.AddScoped<IModuleServices, ModuleServices>();
+            services.AddScoped<IRequirementTypeServices, RequirementTypeServices>();
             //services.AddScoped<IReportServices, ReportServices>();
             // For Entity Framework  
             services.AddDbContext<CharityContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConneStr")));
