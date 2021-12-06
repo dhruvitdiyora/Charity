@@ -1,5 +1,7 @@
 using CharityAPI.Authentication;
+using CharityAPI.IServices;
 using CharityAPI.Models;
+using CharityAPI.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,7 +35,8 @@ namespace CharityAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            //services.AddScoped<IDoctorServices, DoctorServices>();
+            services.AddScoped<ICityServices, CityServices>();
+            services.AddScoped<IStateServices, StateServices>();
             //services.AddScoped<IReportServices, ReportServices>();
             // For Entity Framework  
             services.AddDbContext<CharityContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConneStr")));
