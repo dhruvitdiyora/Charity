@@ -1,0 +1,106 @@
+Charity event: how much volunteers/users have joined=> volunteer/user id??
+
+Context of not connecting post-charity event:
+post: done by normal user, for seeking help
+charityEvent: done by orgaisation, for distribution/activity
+
+Charity event:
+1. City: city id (short)
+2. User: user id
+3. Pincode, city: pincode id (long)
+4. Event name, Event type: event id
+5. Ongoing events: (filter) start date, end date
+6. Search by Organisation: organisation id
+Changes: 
+(Organisation Id, ClusterLocationId: null)
+
+Cities:
+1. Search by post: Post id
+2. Search by pincode, city: pincode id (long)
+3. Search by city: city id (short)
+
+ClusterLocations:
+1. Search by requirement: RequirementType id
+2. Search by pincode, city, state: pincode id (long)
+3. Search by city: city id (short)
+4. Search by location name: ClusterLocationId
+5. Search by state: state id (short)
+// no use of post id as multiple post for a single cluster will be there
+
+Module:  // No use for fetching module details- it can be used to fetch pther apis
+1. ModuleName, ModuleType: Module id
+
+Organisation:
+1. Search by name: Organisation id
+2. Search by User(organisation creator): user id
+Changes:
+(City, state, pincode) id
+3. Search by pincode, city, state: pincode id (long)
+4. Search by city: city id (short)
+5. Search by state: state id (short)
+6. Search by a view of Charity Event: charity event => Organisation id
+7. Search by a view of Volunteer: Volunteer => Organisation id
+
+Pincode:
+1. Pincode, P.O. name: pincode id
+//Optional: search by city/state => city/state id, ain't worth as it'll give a long list
+2. Search by cluster: clusterLocation id
+3. Search by post: Post id
+4. Search by charity event: Charity Event id
+
+Post:
+1. Search by username, userid: user id
+2. Search by pincode, city, state: pincode id (long)
+3. Search by city: city id (short)
+4. Search by state: state id (short)
+5. Search by requirement: RequirementType id
+6. Search by location name: Post id, clusterLocation id
+7. Search by spam: Spam id
+8. Search by urgency: Urgency id
+// Longitude-lattitude??
+
+RequirementType:
+1. Search by RequirementTypeName: RequirementType id
+2. Search by Post: post id
+// Search by location name: post-clusterLocation id??
+
+Roles:
+Role permission id: user, RoleType, Role, module??
+1. Search by user: user id
+2. Search by RoleType, Role: RoleType id
+3. Search by module: Module id
+
+RoleType:
+1. Search by RoleType, RoleType id: RoleType id
+
+Spam:
+1. Search by post: post id (will get =>User, pincode, city, state, location)
+2. Search by user: user id
+
+States:
+1. Search by State Id, State Name: State id
+2. Search by City id, Pincode id: Pincode id (City id-city)
+
+User Data:
+1. Search by first-last name, username, user id, city, state, pincode, volunteer id, organisation id, event organiser id: user id
+2. Search by pincode, city, state: pincode id (long)
+3. Search by city: city id (short)
+4. Search by state: state id (short)
+5. Search by post: post id
+6. if charity event column added=> charityEvent id
+7. Spam post: spam(post) id (which post is spam=> ban/restrict the user)
+// Extra: search by role??
+
+Urgency:
+1. Search by post: post id (will get =>User, pincode, city, state, location)
+2. Search by user: user id
+
+Volunteer:
+1. Search by user id, user name: user id
+2. Search by organisation id, orgaisation name, : organisation id
+3. if charity event column added=> charityEvent id
+
+UserData:
+1. Admin: Userid, username, email address, password hash, roletype
+2. User: Userid, username, email address, password hash, roletype
+3. UserProfile: Gender, ProfileImage, UserDescription, Mobile No, 
