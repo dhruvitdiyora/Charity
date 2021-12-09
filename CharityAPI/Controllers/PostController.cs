@@ -121,7 +121,7 @@ namespace CharityAPI.Controllers
         //Post api
         // POST: api/post
         [HttpPost]
-        public ActionResult<Cities> CreatePost(Post post)
+        public ActionResult<Post> CreatePost(Post post)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Invalid data.");
