@@ -64,7 +64,7 @@ namespace CharityAPI.Services
         }
 
         //get distric by pincode id 
-        public IEnumerable GetDistricByPincodeId(int PincodeId)
+        public IEnumerable GetDistrictByPincodeId(int PincodeId)
         {
             var pincode = _context.Pincode.Where(x => x.IsPublished == true && x.PincodeId == PincodeId);
             return pincode;
