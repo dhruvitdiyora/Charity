@@ -43,7 +43,7 @@ Table vise edits:
     6. Search by a view of Charity Event: charity event => Organisation id
     7. Search by a view of Volunteer: Volunteer => Organisation id
     Changes:
-    (City, state, pincode) id
+    (City, state, pincode) id   
 
 6. Pincode:
     1. Pincode, P.O. name: pincode id
