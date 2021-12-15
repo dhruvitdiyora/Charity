@@ -219,4 +219,4 @@ Event (includes posts inside which normal user can post)
 8. OTP Authentication at login time 
 // Social accounts login
 
-9. Post limit feature (>5 no more post for the day)
+9. Post limit feature (>5 no more post for the day for the same user)
