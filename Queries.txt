@@ -217,6 +217,6 @@ Event (includes posts inside which normal user can post)
 // 7. Save post/event: book-mark post
 
 8. OTP Authentication at login time 
-// Social accounts login
+// Social accounts login: (FB, E-mail, Insta, Twitter)
 
 9. Post limit feature (>5 no more post for the day for the same user)
